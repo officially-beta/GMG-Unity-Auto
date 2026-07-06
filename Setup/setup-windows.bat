@@ -2,7 +2,7 @@
 setlocal
 
 :: =====================================================
-:: GMG-Unity-2025 - Windows Setup Launcher
+:: GMG-Unity - Windows Setup Launcher
 :: Right-click this file and choose "Run as administrator"
 :: =====================================================
 
@@ -14,7 +14,7 @@ if %errorLevel% neq 0 (
     exit /b
 )
 
-echo Starting GMG-Unity-2025 setup...
+echo Starting GMG-Unity setup...
 echo.
 
 powershell -NoExit -ExecutionPolicy Bypass -File "%~dp0setup-windows.ps1"

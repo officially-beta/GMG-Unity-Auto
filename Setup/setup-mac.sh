@@ -1,12 +1,12 @@
 #!/bin/bash
 # =====================================================
-# GMG-Unity-2025 - Mac Setup Script
+# GMG-Unity - Mac Setup Script
 # Installs Unity Hub
 # =====================================================
 
 set -e
 
-echo "=== GMG-Unity-2025 Mac Setup ==="
+echo "=== GMG-Unity Mac Setup ==="
 
 TEMP_DIR="$(mktemp -d)"
 trap 'rm -rf "$TEMP_DIR"' EXIT

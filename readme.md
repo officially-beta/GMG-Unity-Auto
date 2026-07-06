@@ -42,6 +42,13 @@ Follow the instructions below for your operating system. This will install every
 
 ## Troubleshooting
 
+**Antivirus blocks the script from running:**
+Some antivirus software (including Windows Defender SmartScreen, or third-party antivirus) may flag the setup script simply because it's a script downloading and installing other software — this is a false positive, not an actual threat. If this happens:
+1. Check your antivirus's notification/quarantine area for a blocked item related to `setup-windows.bat` or `setup-windows.ps1`
+2. Choose **Allow**, **Restore**, or **Run anyway** (wording varies by antivirus)
+3. If using Windows Defender specifically: Windows Security → Virus & threat protection → Protection history → find the entry → **Allow**
+4. Re-run the script
+
 **Unity Hub flashes open then closes immediately (Windows):**
 This is almost always fixed by the Visual C++ Redistributable installed in `setup-windows.ps1`. If it still happens:
 1. Uninstall Unity Hub (Settings → Apps)

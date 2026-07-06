@@ -1,9 +1,9 @@
 # =====================================================
-# GMG-Unity-2025 - Windows Setup Script
+# GMG-Unity - Windows Setup Script
 # Installs Visual C++ Redistributable + Unity Hub
 # =====================================================
 
-Write-Host "=== GMG-Unity-2025 Windows Setup ===" -ForegroundColor Cyan
+Write-Host "=== GMG-Unity Windows Setup ===" -ForegroundColor Cyan
 
 # Must run as Administrator
 # NOTE: if you're running this directly (rather than via setup-windows.bat),
