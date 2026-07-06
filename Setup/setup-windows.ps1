@@ -6,10 +6,13 @@
 Write-Host "=== GMG-Unity-2025 Windows Setup ===" -ForegroundColor Cyan
 
 # Must run as Administrator
+# NOTE: if you're running this directly (rather than via setup-windows.bat),
+# this will relaunch itself elevated in a NEW window and close this one -
+# that's expected. The new window will stay open with -NoExit.
 $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 if (-not $isAdmin) {
     Write-Host "This script needs to run as Administrator. Restarting with elevated permissions..." -ForegroundColor Yellow
-    Start-Process powershell -Verb RunAs -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
+    Start-Process powershell -Verb RunAs -ArgumentList "-NoExit -NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`""
     exit
 }
 

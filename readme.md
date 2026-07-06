@@ -10,12 +10,15 @@ Follow the instructions below for your operating system. This will install every
 
 1. Download this repository (Code → Download ZIP, or `git clone`)
 2. Open the `setup` folder
-3. Right-click **`setup-windows.ps1`** → **Run with PowerShell**
-   - If Windows asks for permission (UAC prompt), click **Yes** — the script needs admin rights to install software
-   - If PowerShell blocks the script with an "execution policy" message, right-click the file → **Properties** → check **Unblock** at the bottom → Apply, then try again
-4. Wait for the script to finish (installs Visual C++ Redistributable + Unity Hub)
-5. Open **Unity Hub**, sign in, click **Open**, and select the **`game`** folder from this repo
-6. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
+3. Right-click **`setup-windows.bat`** → **Run as administrator**
+   - A UAC prompt will appear — click **Yes**
+   - A terminal window will open and stay open, showing progress
+4. Wait for the script to finish (installs Visual C++ Redistributable + Unity Hub, skipping anything already installed)
+5. Press **Enter** to close the terminal when done
+6. Open **Unity Hub**, sign in, click **Open**, and select the **`game`** folder from this repo
+7. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
+
+> Note: run `setup-windows.bat`, not `setup-windows.ps1` directly. The `.bat` file is what handles the admin prompt properly and keeps the window open so you can see what's happening.
 
 ---
 
@@ -46,8 +49,11 @@ This is almost always fixed by the Visual C++ Redistributable installed in `setu
 3. Restart your PC
 4. Re-run `setup-windows.ps1`
 
+**Terminal window flashes and closes immediately (Windows):**
+Make sure you're running `setup-windows.bat`, not `setup-windows.ps1` directly. Right-clicking a `.ps1` file only offers "Run with PowerShell" (no admin option), which causes it to relaunch itself elevated in a second window and close the first — that's the flash you're seeing. The `.bat` file avoids this by requesting admin rights properly up front.
+
 **Script won't run / "not digitally signed" or execution policy errors (Windows):**
-Right-click the script → Properties → check "Unblock" → Apply. Then run it again.
+Right-click the file → Properties → check "Unblock" at the bottom → Apply. Then run it again.
 
 **"Cannot be opened because it is from an unidentified developer" (Mac):**
 Right-click `setup-mac.sh` → Open, then confirm. Or run `xattr -d com.apple.quarantine setup-mac.sh` in Terminal first.
