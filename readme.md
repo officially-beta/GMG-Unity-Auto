@@ -1,4 +1,4 @@
-# GMG-Unity-2025
+# GMG-Unity
 
 ## Getting Started
 
