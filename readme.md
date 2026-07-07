@@ -15,8 +15,10 @@ Follow the instructions below for your operating system. This will install every
    - A terminal window will open and stay open, showing progress
 4. Wait for the script to finish (installs Visual C++ Redistributable + Unity Hub, skipping anything already installed)
 5. Press **Enter** to close the terminal when done
-6. Open **Unity Hub**, sign in, click **Open**, and select the **`game`** folder from this repo
-7. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
+6. Open **Unity Hub** and sign in with your Unity account
+7. Click **Add** > **Add project from disk...** and select the **`Unity Game`** folder within this repo
+   - Example: `C:\Users\NAME\GMG-Unity-Auto\Unity Game`
+8. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
 
 > Note: run `setup-windows.bat`, not `setup-windows.ps1` directly. The `.bat` file is what handles the admin prompt properly and keeps the window open so you can see what's happening.
 
@@ -35,8 +37,10 @@ Follow the instructions below for your operating system. This will install every
    chmod +x setup-mac.sh
    ./setup-mac.sh
    ```
-5. Open **Unity Hub** (Applications or Spotlight search), sign in, click **Open**, and select the **`game`** folder from this repo
-6. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
+5. Open **Unity Hub** (Applications or Spotlight search) and sign in with your Unity account
+6. Click **Add** > **Add project from disk...** and select the **`Unity Game`** folder within this repo
+   - Example: `/Users/NAME/GMG-Unity-Auto/Unity Game`
+7. Unity Hub will detect the required Editor version and prompt you to install it — let it do so
 
 ---
 
@@ -70,7 +74,7 @@ Right-click `setup-mac.sh` → Open, then confirm. Or run `xattr -d com.apple.qu
 ## Project Structure
 
 ```
-/game/     → Unity project (open this folder in Unity Hub)
-/setup/    → Setup scripts for Windows and Mac
-readme.md  → This file
+/Unity Game/  → Unity project (add this folder in Unity Hub)
+/setup/       → Setup scripts for Windows and Mac
+readme.md     → This file
 ```

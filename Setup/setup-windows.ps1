@@ -60,7 +60,8 @@ Write-Host "`n=== Setup complete! ===" -ForegroundColor Green
 Write-Host "Next steps:"
 Write-Host "  1. Open Unity Hub"
 Write-Host "  2. Sign in with your Unity account"
-Write-Host "  3. Click 'Open' and select the '/game' folder from this repo"
+Write-Host "  3. Click 'Add' > 'Add project from disk...' and select the 'Unity Game' folder within this repo"
+Write-Host "     Example: C:\Users\NAME\GMG-Unity-Auto\Unity Game"
 Write-Host "  4. Unity Hub will prompt you to install the matching Editor version - let it do so"
 
 Read-Host "`nPress Enter to exit"
